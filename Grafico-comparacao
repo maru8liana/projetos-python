@@ -1,0 +1,22 @@
+#Comparação de dois investimentos / Tabela
+
+import matplotlib.pyplot as plt
+
+inv1 = 1000
+inv2 = 1000
+taxa1 = 0.01
+taxa2 = 0.015
+
+h1=[]
+h2=[]
+
+for mes in range(60):
+  inv1 = inv1*(1+taxa1)
+  inv2 = inv2*(1+taxa2)
+  h1.append(inv1)
+  h2.append(inv2)
+
+plt.plot(h1)
+plt.plot(h2)
+plt.legend(["Investimento A","Investimento B"])
+plt.show()
